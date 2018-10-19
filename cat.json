@@ -6,9 +6,11 @@
     "root": [
       {
         "type": "url",
-        "key": "cat",
-        "xpath": "//a[contains(concat(' ', @class, ' '), ' cat-flag ')]",
-        "re": ["cat\\?id=\\d+"]
+        "key": "cat2",
+        "xpath": "//ul[contains(concat(' ', @class, ' '), ' n-ltlst ')]//a",
+        "re":[
+          "cat\\?id=\\d+&initial=\\d+"
+        ]
       }
     ]
   },
