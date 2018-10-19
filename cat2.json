@@ -1,5 +1,5 @@
 {
-  "name": "index",
+  "name": "cat2",
   "example_url": "https://music.163.com/discover/artist/cat?id=1002&initial=65",
   "default_fields": true,
   "rules": {
