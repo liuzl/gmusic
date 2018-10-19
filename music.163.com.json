@@ -1,13 +1,25 @@
 {
-  "name": "artist_cat",
-  "example_url": "https://music.163.com/discover/artist/cat?id=1001",
+  "name": "index",
+  "example_url": "https://music.163.com/discover/artist/cat?id=1002",
   "default_fields": true,
   "rules": {
     "root": [
       {
         "type": "url",
         "key": "cat",
-        "xpath": "//a[contains(concat(' ', @class, ' '), ' cat-flag ')]"
+        "xpath": "//a[contains(concat(' ', @class, ' '), ' cat-flag ')]",
+        "re": ["cat\\?id=\\d+"]
+      },
+      {
+        "type": "url",
+        "key": "cat2",
+        "xpath": "//ul[contains(concat(' ', @class, ' '), ' n-ltlst ')]//a"
+      },
+      {
+        "type": "url",
+        "key": "artist",
+        "xpath": "//div[contains(concat(' ', @class, ' '), ' m-sgerlist ')]//a",
+        "re": ["music.163.com/artist\\?id=\\d+"]
       }
     ]
   },
