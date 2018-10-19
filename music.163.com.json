@@ -13,7 +13,10 @@
       {
         "type": "url",
         "key": "cat2",
-        "xpath": "//ul[contains(concat(' ', @class, ' '), ' n-ltlst ')]//a"
+        "xpath": "//ul[contains(concat(' ', @class, ' '), ' n-ltlst ')]//a",
+        "re":[
+          "cat\\?id=\\d+&initial=\\d+"
+        ]
       },
       {
         "type": "url",
