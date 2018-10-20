@@ -1,2 +1,2 @@
-go get github.com/crawlerclub/et/cmd/parse
-parse -conf music.163.com.json
+go get crawler.club/et/cmd/parse
+parse -conf index.json
