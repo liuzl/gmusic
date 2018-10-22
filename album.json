@@ -1,0 +1,35 @@
+{
+  "name": "album",
+  "example_url": "https://music.163.com/album?id=3084625",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "url",
+        "key": "song",
+        "xpath": "//ul[contains(concat(' ',@class,' '),' f-hide ')]//a"
+      }, {
+        "type": "text",
+        "key": "name",
+        "xpath": "//h2[contains(concat(' ',@class,' '),' f-ff2 ')]"
+      }, {
+        "type": "text",
+        "key": "subtit",
+        "xpath": "//div[contains(concat(' ',@class,' '),' subtit ')]"
+      }, {
+        "type": "attr",
+        "key": "src",
+        "xpath": "//div[contains(concat(' ',@class,' '),' cover ')]/img"
+      }, {
+        "type": "text",
+        "key": "intro",
+        "xpath": "//p[contains(concat(' ',@class,' '),' intr ')]"
+      }, {
+        "type": "text",
+        "key": "desc",
+        "xpath": "//div[contains(concat(' ',@class,' '),' n-albdesc ')]"
+      }
+    ]
+  },
+  "js": ""
+}
