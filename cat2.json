@@ -8,7 +8,8 @@
         "type": "url",
         "key": "artist",
         "xpath": "//div[contains(concat(' ', @class, ' '), ' m-sgerlist ')]//a",
-        "re": ["music.163.com/artist\\?id=\\d+"]
+        "re": ["music.163.com/artist\\?id=\\d+"],
+        "js":"function process(s){ var id=/id=(\\d+)/.exec(s); var ret=[{\"key\":\"artist\",\"url\":s},{\"key\":\"artist_desc\",\"url\":\"https://music.163.com/artist/desc?id=\"+id[1]},{\"key\":\"album\",\"url\":\"https://music.163.com/artist/album?limit=1000000&id=\"+id[1]}]; return ret;}"
       }
     ]
   },
