@@ -1,0 +1,27 @@
+{
+  "name": "artist_desc",
+  "example_url": "https://music.163.com/artist/desc?id=6460",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "text",
+        "key": "name",
+        "xpath": "//*[@id='artist-name']"
+      }, {
+        "type": "text",
+        "key": "alias",
+        "xpath": "//*[@id='artist-alias']"
+      }, {
+        "type": "attr",
+        "key": "src",
+        "xpath": "//div[contains(concat(' ',@class,' '),' n-artist ')]/img"
+      }, {
+        "type": "text",
+        "key": "desc",
+        "xpath": "//div[contains(concat(' ',@class,' '),' n-artdesc ')]"
+      }
+    ]
+  },
+  "js": ""
+}
