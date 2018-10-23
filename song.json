@@ -1,0 +1,27 @@
+{
+  "name": "song",
+  "example_url": "https://music.163.com/song?id=36229055",
+  "default_fields": true,
+  "rules": {
+    "root": [
+      {
+        "type": "text",
+        "key": "name",
+        "xpath": "//div[contains(concat(' ',@class,' '),' tit ')]"
+      }, {
+        "type": "text",
+        "key": "desc",
+        "xpath": "//p[contains(concat(' ',@class,' '),' des ')]"
+      }, {
+        "type": "html",
+        "key": "meta",
+        "xpath": "//p[contains(concat(' ',@class,' '),' des ')]//a",
+        "re": [
+          "/artist\\?id=(?P<artist>\\d+)",
+          "/album\\?id=(?P<album>\\d+)"
+        ]
+      }
+    ]
+  },
+  "js": ""
+}
