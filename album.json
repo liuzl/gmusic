@@ -5,8 +5,8 @@
   "rules": {
     "root": [
       {
-        "type": "url",
-        "key": "song",
+        "type": "dom",
+        "key": "songlist",
         "xpath": "//ul[contains(concat(' ',@class,' '),' f-hide ')]//a"
       }, {
         "type": "text",
@@ -28,6 +28,17 @@
         "type": "text",
         "key": "desc",
         "xpath": "//div[contains(concat(' ',@class,' '),' n-albdesc ')]"
+      }
+    ],
+    "songlist": [
+      {
+        "type": "url",
+        "key": "song",
+        "xpath": "."
+      }, {
+        "type": "text",
+        "key": "name",
+        "xpath": "."
       }
     ]
   },
